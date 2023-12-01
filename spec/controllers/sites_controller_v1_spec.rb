@@ -28,4 +28,13 @@ RSpec.describe Api::V1::SitesController, type: :controller do
     end
   end
 
+  describe 'PATCH /api/v1/sites/id' do
+    it 'Consegue atualizar um site e retornar status 200?' do
+      site = Site.last
+      patch :update, params: {site: {url: 'www.amazon.com', description: 'site de vendas'}, id: site.id}
+      expect(response.body).to include_json(url: 'www.amazon.com')
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end

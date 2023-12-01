@@ -7,7 +7,7 @@ RSpec.describe Site, type: :model do
   describe 'Testes de preenchimento do model Site' do
 
     it 'url consegue ser preenchido?' do
-      @site.url = ''
+      @site.url = 'www.rubygems.org'
       expect(@site.url).to eq('www.rubygems.org')
     end
 

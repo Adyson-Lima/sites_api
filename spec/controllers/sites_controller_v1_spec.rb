@@ -12,4 +12,12 @@ RSpec.describe Api::V1::SitesController, type: :controller do
     end
   end
 
+  describe 'GET /api/v1/sites/id' do
+    it 'Consegue listar um site especifico e retornar status 200?' do
+      get :show, params: {id: @site.id}
+      expect(response.body).to include_json(id: @site.id)
+      expect(response).to have_http_status(200)
+    end
+  end
+
 end

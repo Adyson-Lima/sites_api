@@ -11,6 +11,11 @@ RSpec.describe Site, type: :model do
       expect(@site.url).to eq('www.rubygems.org')
     end
 
+    it 'description consegue ser preenchido?' do
+      @site.description = ''
+      expect(@site.description).to eq('informações sobre gems')
+    end
+
   end
 
 end

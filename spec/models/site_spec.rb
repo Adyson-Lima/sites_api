@@ -28,7 +28,7 @@ RSpec.describe Site, type: :model do
 
     it 'Site invalido com campos obrigatorios não preenchidos?' do
       site = Site.new
-      expect(site).to be_valid
+      expect(site).to be_invalid
     end
 
   end

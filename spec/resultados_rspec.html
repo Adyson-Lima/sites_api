@@ -288,55 +288,35 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_2" class="passed">GET /api/v1/sites</dt>
     <script type="text/javascript">moveProgressBar('11.1');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os sites e retornar status 200?</span><span class='duration'>0.04260s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar todos os sites e retornar status 200?</span><span class='duration'>0.04438s</span></dd>
   </dl>
 </div>
 <div id="div_group_3" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_3" class="passed">GET /api/v1/sites/id</dt>
     <script type="text/javascript">moveProgressBar('22.2');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue listar um site especifico e retornar status 200?</span><span class='duration'>0.00871s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue listar um site especifico e retornar status 200?</span><span class='duration'>0.00708s</span></dd>
   </dl>
 </div>
 <div id="div_group_4" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_4" class="passed">POST /api/v1/sites</dt>
     <script type="text/javascript">moveProgressBar('33.3');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue criar um site e retornar status 201?</span><span class='duration'>0.01144s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue criar um site e retornar status 201?</span><span class='duration'>0.01165s</span></dd>
   </dl>
 </div>
 <div id="div_group_5" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_5" class="passed">PATCH /api/v1/sites/id</dt>
     <script type="text/javascript">moveProgressBar('44.4');</script>
-    <dd class="example passed"><span class="passed_spec_name">Consegue atualizar um site e retornar status 200?</span><span class='duration'>0.01111s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue atualizar um site e retornar status 200?</span><span class='duration'>0.01044s</span></dd>
   </dl>
 </div>
 <div id="div_group_6" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_6" class="passed">DELETE /api/v1/sites/id</dt>
-    <script type="text/javascript">makeRed('rspec-header');</script>
-    <script type="text/javascript">makeRed('div_group_6');</script>
-    <script type="text/javascript">makeRed('example_group_6');</script>
     <script type="text/javascript">moveProgressBar('55.5');</script>
-    <dd class="example failed">
-      <span class="failed_spec_name">Consegue excluir um site e retornar status 204?</span>
-      <span class="duration">0.00585s</span>
-      <div class="failure" id="failure_1">
-        <div class="message"><pre>  Failure/Error: delete :destroy, params: {id: site.id}
-
-  AbstractController::ActionNotFound:
-    The action &#39;destroy&#39; could not be found for Api::V1::SitesController
-  # ./spec/controllers/sites_controller_v1_spec.rb:43:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-        <div class="backtrace"><pre>./spec/controllers/sites_controller_v1_spec.rb:43:in `block (3 levels) in &lt;top (required)&gt;&#39;</pre></div>
-    <pre class="ruby"><code><span class="linenum">41</span>    it 'Consegue excluir um site e retornar status 204?' do
-<span class="linenum">42</span>      site = Site.last
-<span class="offending"><span class="linenum">43</span>      delete :destroy, params: {id: site.id}</span>
-<span class="linenum">44</span>      expect(Site.all).not_to include(site)
-<span class="linenum">45</span>      expect(response).to have_http_status(204)
-<span class="linenum">46</span><span class="comment"># Install the coderay gem to get syntax highlighting</span></code></pre>
-      </div>
-    </dd>
+    <dd class="example passed"><span class="passed_spec_name">Consegue excluir um site e retornar status 204?</span><span class='duration'>0.01235s</span></dd>
   </dl>
 </div>
 <div id="div_group_7" class="example_group passed">
@@ -348,22 +328,22 @@ a {
   <dl style="margin-left: 15px;">
   <dt id="example_group_8" class="passed">Testes de preenchimento do model Site</dt>
     <script type="text/javascript">moveProgressBar('66.6');</script>
-    <dd class="example passed"><span class="passed_spec_name">url consegue ser preenchido?</span><span class='duration'>0.00110s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">url consegue ser preenchido?</span><span class='duration'>0.00129s</span></dd>
     <script type="text/javascript">moveProgressBar('77.7');</script>
-    <dd class="example passed"><span class="passed_spec_name">description consegue ser preenchido?</span><span class='duration'>0.00088s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">description consegue ser preenchido?</span><span class='duration'>0.00118s</span></dd>
   </dl>
 </div>
 <div id="div_group_9" class="example_group passed">
   <dl style="margin-left: 15px;">
   <dt id="example_group_9" class="passed">Teste de validação do model Site</dt>
     <script type="text/javascript">moveProgressBar('88.8');</script>
-    <dd class="example passed"><span class="passed_spec_name">Site valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00107s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Site valido com campos obrigatorios preenchidos?</span><span class='duration'>0.00129s</span></dd>
     <script type="text/javascript">moveProgressBar('100.0');</script>
-    <dd class="example passed"><span class="passed_spec_name">Site invalido com campos obrigatorios não preenchidos?</span><span class='duration'>0.00184s</span></dd>
+    <dd class="example passed"><span class="passed_spec_name">Site invalido com campos obrigatorios não preenchidos?</span><span class='duration'>0.00241s</span></dd>
   </dl>
 </div>
-<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.10620 seconds</strong>";</script>
-<script type="text/javascript">document.getElementById('totals').innerHTML = "9 examples, 1 failure";</script>
+<script type="text/javascript">document.getElementById('duration').innerHTML = "Finished in <strong>0.10291 seconds</strong>";</script>
+<script type="text/javascript">document.getElementById('totals').innerHTML = "9 examples, 0 failures";</script>
 </div>
 </div>
 </body>

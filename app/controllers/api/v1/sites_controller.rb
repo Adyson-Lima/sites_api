@@ -1,6 +1,6 @@
 class Api::V1::SitesController < ApplicationController
 
-  before_action :set_site, only: %i[show update] # show update destroy
+  before_action :set_site, only: %i[show update destroy] # show update destroy
 
   def index
     @sites = Site.all 
@@ -26,6 +26,10 @@ class Api::V1::SitesController < ApplicationController
     else
       render json: @site.errors, status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @site.destroy!
   end
 
 private

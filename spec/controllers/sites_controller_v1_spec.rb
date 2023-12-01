@@ -24,7 +24,7 @@ RSpec.describe Api::V1::SitesController, type: :controller do
     it 'Consegue criar um site e retornar status 201?' do
       post :create, params: {site: {url: 'www.debian.org', description: 'site da distro Debian'},format: :json}
       expect(response.body).to include_json(url: 'www.debian.org')
-      expect(response).to have_http_status(200)
+      expect(response).to have_http_status(201)
     end
   end
 

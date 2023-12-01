@@ -11,6 +11,15 @@ class Api::V1::SitesController < ApplicationController
     render json: @site
   end
 
+  def create
+    @site = Site.new(site_params)
+    if @site.save
+      render json: @site, status: :created, location: api_v1_site_url(@site)
+    else
+      render json: @site.errors, status: :unprocessable_entity
+    end
+  end
+
 private
 
 def set_site

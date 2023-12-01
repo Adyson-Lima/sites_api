@@ -1,6 +1,6 @@
 class Api::V1::SitesController < ApplicationController
 
-  before_action :set_site, only: %i[show] # show update destroy
+  before_action :set_site, only: %i[show update] # show update destroy
 
   def index
     @sites = Site.all 
@@ -15,6 +15,14 @@ class Api::V1::SitesController < ApplicationController
     @site = Site.new(site_params)
     if @site.save
       render json: @site, status: :created, location: api_v1_site_url(@site)
+    else
+      render json: @site.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @site.update(site_params)
+      render json: @site
     else
       render json: @site.errors, status: :unprocessable_entity
     end
